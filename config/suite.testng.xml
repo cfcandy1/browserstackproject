@@ -6,7 +6,7 @@
         <parameter name="environment" value="chrome"/>
         <classes>
             <class name="com.browserstack.suite.SuiteTest01"/>
-            <class name="com.browserstack.suite.SuiteTest02"/>
+            <class name="com.browserstack.suite.IncorrectCredentialsTest"/>
             <class name="com.browserstack.suite.SuiteTest03"/>
             <class name="com.browserstack.suite.SuiteTest04"/>
             <class name="com.browserstack.suite.SuiteTest05"/>
@@ -23,7 +23,7 @@
         <parameter name="environment" value="firefox"/>
         <classes>
             <class name="com.browserstack.suite.SuiteTest01"/>
-            <class name="com.browserstack.suite.SuiteTest02"/>
+            <class name="com.browserstack.suite.IncorrectCredentialsTest"/>
             <class name="com.browserstack.suite.SuiteTest03"/>
             <class name="com.browserstack.suite.SuiteTest04"/>
             <class name="com.browserstack.suite.SuiteTest05"/>
