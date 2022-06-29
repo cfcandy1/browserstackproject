@@ -1,14 +1,12 @@
 {
-  "url": "https://aobrien_HrBoXL:dBYL5U3ysZUsxEVnkCz7@hub-cloud.browserstack.com/wd/hub",
+  "server": "hub-cloud.browserstack.com",
   "user": "aobrien_HrBoXL",
   "key": "dBYL5U3ysZUsxEVnkCz7",
-
   "capabilities": {
     "build": "testng-browserstack",
-    "name": "parallel_test",
+    "name": "Bstack-[TestNG] Parallel Test",
     "browserstack.debug": true
   },
-
   "environments": {
     "chrome": {
       "browser": "chrome"
@@ -17,6 +15,7 @@
       "browser": "firefox"
     },
     "safari": {
+      "os": "OS X",
       "browser": "safari"
     },
     "ie": {
