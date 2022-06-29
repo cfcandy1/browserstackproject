@@ -1,31 +1,18 @@
 package com.browserstack;
-import com.browserstack.local.Local;
 
-import java.io.File;
+import com.browserstack.local.Local;
 import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Iterator;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Factory;
-import org.testng.Assert;
 
 
 public class BrowserStackTestNGTest {
@@ -74,7 +61,7 @@ public class BrowserStackTestNGTest {
             l.start(options);
         }
 
-        driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("url")+"/wd/hub"), capabilities);
     }
 
     @AfterMethod(alwaysRun=true)

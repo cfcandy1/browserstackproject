@@ -1,5 +1,5 @@
 {
-  "server": "https://aobrien_HrBoXL:dBYL5U3ysZUsxEVnkCz7@hub-cloud.browserstack.com/wd/hub",
+  "url": "https://aobrien_HrBoXL:dBYL5U3ysZUsxEVnkCz7@hub-cloud.browserstack.com/wd/hub",
   "user": "aobrien_HrBoXL",
   "key": "dBYL5U3ysZUsxEVnkCz7",
 
