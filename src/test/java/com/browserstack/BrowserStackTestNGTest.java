@@ -29,7 +29,7 @@ import org.testng.Assert;
 
 
 public class BrowserStackTestNGTest {
-    public WebDriver driver;
+    public static WebDriver driver;
     private Local l;
 
     @BeforeMethod(alwaysRun=true)
