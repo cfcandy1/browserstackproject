@@ -8,18 +8,22 @@ import java.util.Map;
 import java.util.Iterator;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
 
 
 public class BrowserStackTestNGTest {
     public static WebDriver driver;
+    JavascriptExecutor jse = (JavascriptExecutor)driver;
     private Local l;
 
-    @BeforeMethod(alwaysRun=true)
+    @BeforeTest(alwaysRun=true)
     @org.testng.annotations.Parameters(value={"config", "environment"})
     public void setUp(String config_file, String environment) throws Exception {
         JSONParser parser = new JSONParser();
@@ -65,7 +69,7 @@ public class BrowserStackTestNGTest {
         driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
     }
 
-    @AfterMethod(alwaysRun=true)
+    @AfterTest(alwaysRun=true)
     public void tearDown() throws Exception {
         driver.quit();
         if(l != null) l.stop();
