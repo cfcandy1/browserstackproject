@@ -9,12 +9,15 @@ public class SingleTest extends BrowserStackTestNGTest {
 
     @Test
     public void test() throws Exception {
-        driver.get("https://www.google.com/ncr");
-        WebElement element = driver.findElement(By.name("q"));
-        element.sendKeys("BrowserStack");
-        element.submit();
-        Thread.sleep(5000);
+        driver.get("https://staging.admiralcasino.co.uk");
 
-        Assert.assertEquals("BrowserStack - Google Search", driver.getTitle());
+        WebElement userField = driver.findElement(By.id("user"));
+        WebElement passwordField = driver.findElement(By.id("password"));
+
+        Assert.assertTrue(userField.isDisplayed());
+        System.out.println("user field is displayed - Assert passed");
+
+        Assert.assertTrue(passwordField.isDisplayed());
+        System.out.println("password field is displayed - Assert passed");
     }
 }

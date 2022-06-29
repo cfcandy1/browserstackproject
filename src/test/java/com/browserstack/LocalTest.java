@@ -17,7 +17,7 @@ public class LocalTest extends BrowserStackTestNGTest {
         Assert.assertTrue(userField.isDisplayed());
         System.out.println("user field is displayed - Assert passed");
 
-        Assert.assertTrue(userField.isDisplayed());
+        Assert.assertTrue(passwordField.isDisplayed());
         System.out.println("password field is displayed - Assert passed");
     }
 }

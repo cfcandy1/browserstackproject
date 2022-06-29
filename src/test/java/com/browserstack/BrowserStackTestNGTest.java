@@ -27,6 +27,7 @@ public class BrowserStackTestNGTest {
         JSONObject envs = (JSONObject) config.get("environments");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("sessionTimeout", "5m");
 
         Map<String, String> envCapabilities = (Map<String, String>) envs.get(environment);
         Iterator it = envCapabilities.entrySet().iterator();
