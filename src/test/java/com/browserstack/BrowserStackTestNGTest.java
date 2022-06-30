@@ -21,6 +21,7 @@ import org.testng.annotations.BeforeTest;
 public class BrowserStackTestNGTest {
     public static WebDriver driver;
     JavascriptExecutor jse = (JavascriptExecutor)driver;
+
     private Local l;
 
     @BeforeTest(alwaysRun=true)
@@ -66,6 +67,7 @@ public class BrowserStackTestNGTest {
             l.start(options);
         }
 
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
         driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
     }
 
